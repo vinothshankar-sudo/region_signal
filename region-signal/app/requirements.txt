@@ -1,0 +1,6 @@
+fastapi
+uvicorn
+psycopg[binary]
+sqlalchemy>=2.0
+databricks-sdk
+itsdangerous

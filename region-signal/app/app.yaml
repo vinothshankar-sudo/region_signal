@@ -1,0 +1,11 @@
+command: ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
+env:
+  - name: BUSINESS_TZ
+    value: "America/Chicago"
+  - name: ALLOW_DEMO_USER          # POC only: lets ?as=<user_id> act as another user. Remove for production.
+    value: "true"
+  - name: WINDOW_HOURS
+    value: "3"
+  - name: APP_SECRET_KEY
+    value: "change-me-to-a-long-random-string"   # PoC only; move to a secret later
+  # PGHOST / PGDATABASE / PGUSER / PGPORT are injected when the Lakebase database resource is added to the app
